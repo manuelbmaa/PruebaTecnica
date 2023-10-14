@@ -1,17 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    <h3>Welcome</h3>
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <h1>Bienvenido/a</h1>
+                        <p>Este es un proyecto hecho en Laravel versión 10 para prueba técnica.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('images/col-banner.svg') }}" alt="Imagen de Banner">
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 @endsection
