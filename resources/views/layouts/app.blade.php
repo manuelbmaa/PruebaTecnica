@@ -19,6 +19,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('styles/home-styles.css') }}"> <!-- Ruta al archivo CSS personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -26,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="{{ asset('images/logo.jpg') }}" width="50"
+                <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('images/logo.jpg') }}" width="50"
                         alt="Logo">EMKT Company</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +36,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Somos EMKT</a>
+                            <a class="nav-link" href="{{ route('somos-emkt.create') }}">Somos EMKT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('somos-emkt.index') }}">Listado de usuarios</a>
                         </li>
                     </ul>
                 </div>
